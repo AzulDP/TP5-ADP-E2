@@ -27,7 +27,7 @@ Luego crea la interfaz necesaria para que el usuario pueda crear un objeto perso
 En una terminal ejecuta el siguiente comando: 
 
 ```
-git clone https://github.com/AzulDP/TP5-ADP-E4.git
+git clone https://github.com/AzulDP/TP5-ADP-E2.git
 ```
 
 ## Autora
