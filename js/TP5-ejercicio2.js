@@ -21,7 +21,10 @@ const GeneracionY = (1981-1993);
 const GeneracionX = (1969-1980);
 const BabyBoom = (1949-1968);
 const SilentGeneration = (1930-1948);
+let formulario = document.querySelector("form");
+// console.log(formulario);
 
+formulario.addEventListener("submit", obtenerDato);
 class Persona {
     #nombre;
     #edad;
@@ -135,7 +138,15 @@ mostrarDatos(){
 
 Persona.getGeneracion = GeneracionZ, 
 GeneracionY,GeneracionX, BabyBoom, SilentGeneration
-const Azul = new Persona ("Azul", "34", "000000000", "M", "89", "1.57", "1988", "Millennial");
-console.log(Azul);
+// const Azul = new Persona ("Azul", "34", "000000000", "M", "89", "1.57", "1988", "Millennial");
+// console.log(Azul);
 
+function obtenerDato(e){
+    e.preventDefault();
+    console.log("ejecutando el evento submit del formulario");
+let inombre = document.getElementById("inombre");
+console.log(inombre.value);
+
+// formulario.reset();
+}
 // let newPerson = new Persona (prompt("Ingrese un nombre"))
