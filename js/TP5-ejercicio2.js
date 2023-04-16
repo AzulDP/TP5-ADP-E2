@@ -10,8 +10,6 @@ mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generac
 
 Para realizar este método tener en cuenta la siguiente tabla de generaciones:
 
-
-
 esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.
 
 mostrarDatos: devuelve toda la información del objeto.
