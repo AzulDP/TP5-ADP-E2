@@ -16,6 +16,12 @@ mostrarDatos: devuelve toda la información del objeto.
 
 Luego crea la interfaz necesaria para que el usuario pueda crear un objeto persona, permitiendo ingresar las propiedades mediante un formulario, también agregar los botones “mostrar generación”, es “mayor de edad” e indicar en un alert el resultado de la función correspondiente.*/
 
+const GeneracionZ = (1994-2010);
+const GeneracionY = (1981-1993);
+const GeneracionX = (1969-1980);
+const BabyBoom = (1949-1968);
+const SilentGeneration = (1930-1948);
+
 class Persona {
     #nombre;
     #edad;
@@ -26,7 +32,7 @@ class Persona {
 #anio;
 #generacion;
 
-constructor (nombre, edad, DNI, sexo, peso, altura, anio, generacion = ("Generacion Z", "Generacion Y","Generacion X", "Baby Boom", "Silent Generation")){
+constructor (nombre, edad, DNI, sexo = ("H", "M"), peso, altura, anio, generacion = (GeneracionZ, GeneracionY,GeneracionX, BabyBoom, SilentGeneration)){
     this.#nombre = nombre;
     this.#edad = edad;
     this.#DNI = DNI;
@@ -80,11 +86,56 @@ set setAnio (nuevoAnio){
 get getGeneracion(){
 }
 set setGeneracion (nuevaGeneracion){
-        this.#generacion = nuevaGeneracion;
+    this.#generacion = nuevaGeneracion;
+}
+
+mostrarGeneracion(nuevaGeneracion){
+        let dob = [parseInt(prompt("Ingrese su año de nacimiento"))];
+        if (dob === (1930-1948)){
+    document.write(`${this.#nombre} pertenece a la ${this.#generacion}`);
+}
+
+document.write(`${this.#nombre} pertenece a la ${this.#generacion}`);
+document.write(`${this.#nombre} pertenece a la ${this.#generacion}`);
+document.write(`${this.#nombre} pertenece a la ${this.#generacion}`);
+}
+
+esMayorDeEdad(){
+    if (this.#edad <= 18) {
+        document.write(`${this.#nombre} es mayor de edad`);
     }
+    }
+mostrarDatos(){
+    document.write(`<ul>
+    <li>Nombre:${this.#nombre}</li>
+    <li>Edad: ${this.#edad}</li>
+    <li>DNI: ${this.#DNI}</li>
+    <li>Sexo: ${this.#sexo}</li>
+    <li>Peso: ${this.#peso}</li>
+    <li>Altura: ${this.#altura}</li>
+    <li>Año de Nacimiento: ${this.#anio}</li>
+    <li>Generación: ${this.#generacion}</li>
+</ul>`);
+}
 
-    mostrarGeneracion(){
-document.write(`${this.nombre} pertenece a la ${this.#generacion}`);
 
 }
-}
+
+// const GeneracionZ = Persona.getGeneracion = (1930-1948);
+// Persona.getGeneracion(1930-1940);
+
+// const Generacion Y = new Generacion
+// const Generacion X = new Generacion
+// const Baby Boom = new Generacion
+// const Silent Generation = new Generacion
+
+// Persona.mostrarDatos();
+
+// Persona.esMayorDeEdad();
+
+Persona.getGeneracion = GeneracionZ, 
+GeneracionY,GeneracionX, BabyBoom, SilentGeneration
+const Azul = new Persona ("Azul", "34", "000000000", "M", "89", "1.57", "1988", "Millennial");
+console.log(Azul);
+
+// let newPerson = new Persona (prompt("Ingrese un nombre"))
