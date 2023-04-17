@@ -72,14 +72,14 @@ set setSexo (nuevoSexo){
 get getPeso (){
 }
 set setPeso (nuevoPeso){
-    this.#peso = peso;
+    this.#peso = nuevoPeso;
 }
 
 get getAltura (){
     
 }
 set setAltura (nuevaAltura){
-    this.#altura = altura;
+    this.#altura = nuevaAltura;
 }
 get getAnio(){
 }
@@ -92,7 +92,7 @@ set setGeneracion (nuevaGeneracion){
     this.#generacion = nuevaGeneracion;
 }
 
-mostrarGeneracion(nuevaGeneracion){
+mostrarGeneracion(){
         let dob = [parseInt(prompt("Ingrese su año de nacimiento"))];
         if (dob === (1930-1948)){
     document.write(`${this.#nombre} pertenece a la ${this.#generacion}`);
